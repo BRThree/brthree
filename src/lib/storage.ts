@@ -1,11 +1,11 @@
-import { StorageEnum } from '@/enums/StorageEnum.ts';
+import {StorageSpace} from "@/enums/storage.ts";
 
 /**
  * 获取处理后对象
  * @param key
  * @return T | null
  */
-export const getItem = <T>(key: StorageEnum): T | null => {
+export const getItem = <T>(key: StorageSpace): T | null => {
   let value = null;
   try {
     const result = window.localStorage.getItem(key);
@@ -23,7 +23,7 @@ export const getItem = <T>(key: StorageEnum): T | null => {
  * @param key
  * @return string | null
  */
-export const getStringItem = (key: StorageEnum): string | null => {
+export const getStringItem = (key: StorageSpace): string | null => {
   return localStorage.getItem(key);
 };
 
@@ -32,7 +32,7 @@ export const getStringItem = (key: StorageEnum): string | null => {
  * @param key
  * @param value
  */
-export const setItem = <T>(key: StorageEnum, value: T): void => {
+export const setItem = <T>(key: StorageSpace, value: T): void => {
   localStorage.setItem(key, JSON.stringify(value));
 };
 
@@ -40,7 +40,7 @@ export const setItem = <T>(key: StorageEnum, value: T): void => {
  * 删除item
  * @param key
  */
-export const removeItem = (key: StorageEnum): void => {
+export const removeItem = (key: StorageSpace): void => {
   localStorage.removeItem(key);
 };
 

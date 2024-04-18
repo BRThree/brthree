@@ -1,4 +1,4 @@
-export enum StorageEnum {
+export enum StorageSpace {
   User = 'user',
   Token = 'token',
   Settings = 'settings',
