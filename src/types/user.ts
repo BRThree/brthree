@@ -1,4 +1,4 @@
-import {Permission} from "@/types/Permission.ts";
+import {Permission} from "@/types/permission.ts";
 import {BasicStatus} from "@/enums/permission.ts";
 import {Role} from "@/types/role.ts";
 
