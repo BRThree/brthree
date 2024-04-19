@@ -5,7 +5,7 @@ import {StorageSpace} from "@/enums/storage.ts";
 
 interface UserStore {
   userInfo: Partial<UserInfo>
-  userToken: string
+  userToken: string|null
   actions: {
     setUserInfo: (userInfo: UserInfo) => void
     setUserToken: (token: string) => void
@@ -15,7 +15,7 @@ interface UserStore {
 
 const store = create<UserStore>((set) => ({
   userInfo: getItem<UserInfo>(StorageSpace.User) || {},
-  userToken: getItem<string>(StorageSpace.Token) || '',
+  userToken: getItem<string>(StorageSpace.Token),
   actions: {
     setUserInfo: (userInfo) => {
       set({ userInfo });
@@ -26,7 +26,7 @@ const store = create<UserStore>((set) => ({
       setItem(StorageSpace.Token, userToken);
     },
     clearUserInfoAndToken() {
-      set({ userInfo: {}, userToken: '' });
+      set({ userInfo: {}, userToken: null });
       removeItem(StorageSpace.User);
       removeItem(StorageSpace.Token);
     },

@@ -1,7 +1,7 @@
 import {PropsWithChildren, useCallback, useEffect} from 'react';
 import { useRouter } from '@/hooks/useRouter.ts';
 
-const WHITE_LIST = ['/login'];
+const WHITE_LIST = ['/login', '/home'];
 
 export default function AuthGuard({ children }: PropsWithChildren) {
   const router = useRouter();
