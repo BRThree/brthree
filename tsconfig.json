@@ -21,7 +21,9 @@
     "noFallthroughCasesInSwitch": true,
 
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@Cubism4/framework/*": ["./Cubism4/Framework/src/*"],
+      "@Cubism2/framework/*": ["./Cubism2/Framework/src/*"]
     }
   },
   "include": ["src"],

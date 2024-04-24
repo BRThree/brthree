@@ -9,6 +9,8 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': _resolve('src'),
+      '@Cubism4/framework': _resolve('./Cubism4/Framework/src'),
+      '@Cubism2/framework': _resolve('./Cubism2/Framework/src'),
     }
   },
   plugins: [react()],
