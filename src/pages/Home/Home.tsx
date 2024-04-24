@@ -1,6 +1,8 @@
+import Page from "@/components/Page/Page.tsx";
+
 const Home = () => {
   return (
-    <div className={''}>Home</div>
+    <Page>Home</Page>
   );
 };
 

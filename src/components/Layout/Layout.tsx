@@ -9,7 +9,7 @@ const Layout = (props: PropsWithChildren) => {
       <header className={'h-fit flex-shrink-0'}>
         <Header/>
       </header>
-      <main className={'flex-1'}>{children}</main>
+      <main className={'flex-grow overflow-auto'}>{children}</main>
       <footer className={'size-fit flex-shrink-0'}></footer>
     </div>
   );
