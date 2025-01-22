@@ -1,5 +1,5 @@
-import article from "@/router/modules/article.tsx";
+import article from '@/router/modules/article.tsx';
 
-const modules = [article]
+const modules = [article];
 
-export default modules
+export default modules;

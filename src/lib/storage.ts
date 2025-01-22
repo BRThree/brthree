@@ -1,4 +1,4 @@
-import {StorageSpace} from "@/enums/storage.ts";
+import { StorageSpace } from '@/enums/storage.ts';
 
 /**
  * 获取处理后对象
@@ -6,16 +6,16 @@ import {StorageSpace} from "@/enums/storage.ts";
  * @return T | null
  */
 export const getItem = <T>(key: StorageSpace): T | null => {
-  let value = null;
-  try {
-    const result = window.localStorage.getItem(key);
-    if (result) {
-      value = JSON.parse(result);
+    let value = null;
+    try {
+        const result = window.localStorage.getItem(key);
+        if (result) {
+            value = JSON.parse(result);
+        }
+    } catch (error) {
+        console.error(error);
     }
-  } catch (error) {
-    console.error(error);
-  }
-  return value;
+    return value;
 };
 
 /**
@@ -24,7 +24,7 @@ export const getItem = <T>(key: StorageSpace): T | null => {
  * @return string | null
  */
 export const getStringItem = (key: StorageSpace): string | null => {
-  return localStorage.getItem(key);
+    return localStorage.getItem(key);
 };
 
 /**
@@ -33,7 +33,7 @@ export const getStringItem = (key: StorageSpace): string | null => {
  * @param value
  */
 export const setItem = <T>(key: StorageSpace, value: T): void => {
-  localStorage.setItem(key, JSON.stringify(value));
+    localStorage.setItem(key, JSON.stringify(value));
 };
 
 /**
@@ -41,12 +41,12 @@ export const setItem = <T>(key: StorageSpace, value: T): void => {
  * @param key
  */
 export const removeItem = (key: StorageSpace): void => {
-  localStorage.removeItem(key);
+    localStorage.removeItem(key);
 };
 
 /**
  * 清除所有item
  */
 export const clearItems = () => {
-  localStorage.clear();
+    localStorage.clear();
 };

@@ -1,10 +1,10 @@
 export enum PermissionType {
-  DIR,
-  MENU,
-  FEAT,
+    DIR,
+    MENU,
+    FEAT,
 }
 
 export enum BasicStatus {
-  DISABLE,
-  ENABLE,
+    DISABLE,
+    ENABLE,
 }

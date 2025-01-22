@@ -2,13 +2,13 @@
 import Router from "@/router/Router.tsx";
 import Live2D from "@/components/Live2D/Live2D.tsx";
 
- const App = () => {
-   return (
-     <>
-       <Router/>
-       <Live2D/>
-     </>
-  )
-}
+const App = () => {
+    return (
+        <>
+            <Router />
+            <Live2D />
+        </>
+    );
+};
 
-export default App
+export default App;
