@@ -9,7 +9,7 @@ const Live2D = () => {
     const init = async () => {
         if (initRef.current) return;
         const { live2dContainer } = await initLive2D({
-            jsonPath: 'src/assets/live2DModel/520兔兔/520兔兔.model3.json'
+            jsonPath: 'src/assets/live2DModel/Hiyori/Hiyori.model3.json'
         });
         container.current?.appendChild(live2dContainer);
     };

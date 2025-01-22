@@ -77,13 +77,6 @@ const preLoadMotionGroup = async (
         motions.setValue(name, tmpMotion);
 
         motionCount++;
-        if (motionCount >= allMotionCount) {
-            // 停止所有运动
-            motionManager.stopAllMotions();
-            const render = createRenderer(1, model);
-            setupTextures(setting, gl, filePath, render);
-            render.startUp(gl);
-        }
     }
 };
 
@@ -134,13 +127,10 @@ export const loadCubismMotion = async (
         );
     }
 
-    if (motionGroupCount == 0) {
-        // 停止所有运动
-        motionManager.stopAllMotions();
-        render = createRenderer(1, model);
-        setupTextures(setting, gl, filePath, render);
-        render.startUp(gl);
-    }
+    motionManager.stopAllMotions();
+    render = createRenderer(1, model);
+    setupTextures(setting, gl, filePath, render);
+    render.startUp(gl);
 
     return {
         motionManager,
