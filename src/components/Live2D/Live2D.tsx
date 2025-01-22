@@ -9,7 +9,7 @@ const Live2D = () => {
     const init = async () => {
         if (initRef.current) return;
         const { live2dContainer } = await initLive2D({
-            jsonPath: 'src/assets/live2DModel/ganyu/ganyu.model3.json'
+            jsonPath: 'src/assets/live2DModel/520兔兔/520兔兔.model3.json'
         });
         container.current?.appendChild(live2dContainer);
     };
@@ -25,7 +25,7 @@ const Live2D = () => {
     return (
         <Draggable>
             <div
-                className={'size-fit'}
+                className={'size-fit absolute left-0 top-0'}
                 ref={(r) => container.current = r}
             />
         </Draggable>

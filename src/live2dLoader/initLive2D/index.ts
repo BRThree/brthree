@@ -140,8 +140,13 @@ const init = async (opt: Live2DInitOpt) => {
     model.saveParameters();
 
     // 设置画布大小
-    live2dContainer.width = model.getCanvasWidth() * (size || 300);
-    live2dContainer.height = model.getCanvasHeight() * (size || 300);
+    const sw = model.getCanvasWidth() * (size || 300);
+    const sh = model.getCanvasHeight() * (size || 300);
+    live2dContainer.setAttribute('style', `width:${sw}px;height:${sh}px;`);
+
+    const dpr = window.devicePixelRatio || 1;
+    live2dContainer.width = sw * dpr;
+    live2dContainer.height = sh * dpr;
 
     const { expressions, physics, pose } = await assetsInit(setting, BASE_URL);
 
